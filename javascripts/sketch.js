@@ -8,7 +8,7 @@ function setup() {
 
 function draw() {
   // put drawing code here
-  if(milis()%500)
+  if(millis()%500)
   {
     i++;
   }
