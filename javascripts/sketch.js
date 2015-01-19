@@ -4,6 +4,7 @@ function setup() {
   // put setup code here
   var myCanvas = createCanvas(600, 400);
   myCanvas.parent('myContainer');
+  background(10,10,10);
 }
 
 function draw() {
@@ -11,6 +12,7 @@ function draw() {
   if(millis()%500)
   {
     i++;
+    background(10,10,10);
   }
   ellipse(0 + i, height/2, 50, 50);
 }
