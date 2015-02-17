@@ -10,12 +10,11 @@ function setup() {
 function draw() {
   // put drawing code here
   background(10,10,10);
-  console.log(i % width);
   if(millis()%500 != 0)
   {
-    if(i % width != 0)
+    if(i % width)
 	{
-		i=0;
+		i++;
 	}
 	else
 	{
