@@ -20,7 +20,7 @@ function draw() {
 
   }
   color(0,100,0)
-  rect(0 + i, 0, height, width/2);
+  rect(0 + i, 0,width/2,height);
 }
 
 function loop(){
