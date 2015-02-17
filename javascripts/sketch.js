@@ -12,14 +12,14 @@ function draw() {
   background(10,10,10);
   if(millis()%500 != 0)
   {
-    //if(i % width == 0)
-	//{
+    if(i % width != 0)
+	{
 		i++;
-	//}
-	//else
-	//{
-	//	i--;
-	//}
+	}
+	else
+	{
+		i=0;
+	}
     
   }
   ellipse(0 + i, height/2, 50, 50);
