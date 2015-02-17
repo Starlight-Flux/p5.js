@@ -14,12 +14,12 @@ function draw() {
   {
     if(i % width)
 	{
-		i++;
+		i = 0;
 	}
 	else
 	{
+		i++;
 		
-		i = 0;
 	}
     
   }
