@@ -16,10 +16,10 @@ function draw() {
 	{
 		i++;
 	}
-	else
-	{
-		i--;
-	}
+	//else
+	//{
+	//	i--;
+	//}
     
   }
   ellipse(0 + i, height/2, 50, 50);
