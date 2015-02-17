@@ -80,7 +80,7 @@ function draw() {
   
   
   fill(0,200,0);
-  rect(BKimage.curVectorPos.x + i, 0, BKimage.w, BKimage.h);
+  rect(BKimage1.curVectorPos.x + i, 0, BKimage1.w, BKimage1.h);
       
 }
 
