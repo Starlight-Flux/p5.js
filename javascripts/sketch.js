@@ -19,7 +19,7 @@ function draw() {
 	else
 	{
 		
-		i++;
+		i = 0;
 	}
     
   }
