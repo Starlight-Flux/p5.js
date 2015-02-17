@@ -14,6 +14,10 @@ function draw() {
   {
     console.log(i % width);
     i++;
+	if(i % width === 0)
+	{
+	 i=0;
+	}
 
   }
   ellipse(0 + i, height/2, 50, 50);
