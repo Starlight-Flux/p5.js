@@ -10,15 +10,19 @@ function setup() {
 function draw() {
   // put drawing code here
   background(10,10,10);
-  if(millis()%500 != 0)
-  {
+  if(millis()%500 != 0){
     console.log(i % width);
     i++;
-	if(i % width === 0)
-	{
+	
+	if(i % width === 0){
 	 i=0;
 	}
 
   }
-  ellipse(0 + i, height/2, 50, 50);
+  color(0,100,0)
+  rect(0 + i, 0, height, width/2);
+}
+
+function loop(){
+
 }
