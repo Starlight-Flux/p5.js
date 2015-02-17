@@ -63,9 +63,7 @@ GameAutom.prototype.changeSpeed = function(speedX,speedY){
 }
 
 
-var BKimage1 = new GameAutom(0,0,width,height,10,10);
-
-
+var BKimage1 = new GameAutom(0,0,width/2,height,10,0);
 
 function setup() {
   // put setup code here
@@ -78,8 +76,17 @@ function draw() {
   // put drawing code here
   background(10,10,10);
   
+  update();
   
-  if(millis()%500 != 0){
+  
+  fill(0,200,0);
+  rect(BKimage.curVectorPos.x + i, 0, BKimage.w, BKimage.h);
+      
+}
+
+function update(){
+
+if(millis()%500 != 0){
     console.log(i % width);
     i++;
 	
@@ -88,21 +95,6 @@ function draw() {
 	}
 
   }
-  
-  fill(0,200,0);
-  rect(0 + i, 0,width/2,height);
-    
-  
-}
-
-function update(){
-
-
-
-
-
-
-
 
 }
 
