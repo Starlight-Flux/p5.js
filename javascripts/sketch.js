@@ -24,6 +24,9 @@ function GameAutom(x,y,w,h,speedX,speedY){
    
 }
 
+//images
+var BKimage1;
+
 
 function setup() {
 
@@ -66,12 +69,7 @@ GameAutom.prototype.changeSpeed = function(speedX,speedY){
 }
 
 
-var BKimage1 = new GameAutom(0,0,width/2,height,10,0);
-
-
-
-
-
+BKimage1 = new GameAutom(0,0,width/2,height,10,0);
 
   // put setup code here
   var myCanvas = createCanvas(600, 400);
