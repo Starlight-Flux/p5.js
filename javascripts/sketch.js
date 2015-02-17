@@ -12,16 +12,9 @@ function draw() {
   background(10,10,10);
   if(millis()%500 != 0)
   {
-    if(i % width)
-	{
-		i = 0;
-	}
-	else
-	{
-		i++;
-		
-	}
-    
+    console.log(i % width);
+    i++;
+
   }
   ellipse(0 + i, height/2, 50, 50);
 }
