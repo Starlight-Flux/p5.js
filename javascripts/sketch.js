@@ -12,13 +12,13 @@ function draw() {
   background(10,10,10);
   if(millis()%500 == 0)
   {
-    if(i % width != 0)
+    if(i % width == 0)
 	{
 		i++;
 	}
 	else
 	{
-		i++;
+		i--;
 	}
     
   }
