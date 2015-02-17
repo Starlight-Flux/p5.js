@@ -24,6 +24,9 @@ function GameAutom(x,y,w,h,speedX,speedY){
    
 }
 
+
+function setup() {
+
 GameObj.prototype.add = function(ix,iy){
       this.oldVectorPos.set(this.curVectorPos);
       this.curVectorPos.add(ix,iy);
@@ -65,7 +68,11 @@ GameAutom.prototype.changeSpeed = function(speedX,speedY){
 
 var BKimage1 = new GameAutom(0,0,width/2,height,10,0);
 
-function setup() {
+
+
+
+
+
   // put setup code here
   var myCanvas = createCanvas(600, 400);
   myCanvas.parent('myContainer');
