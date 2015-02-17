@@ -69,12 +69,14 @@ GameAutom.prototype.changeSpeed = function(speedX,speedY){
 }
 
 
-BKimage1 = new GameAutom(0,0,width/2,height,10,0);
+
 
   // put setup code here
   var myCanvas = createCanvas(600, 400);
   myCanvas.parent('myContainer');
   background(10,10,10);
+  
+  BKimage1 = new GameAutom(0,0,width/2,height,10,0);
 }
 
 function draw() {
@@ -86,6 +88,7 @@ function draw() {
   
   fill(0,200,0);
   rect(BKimage1.curVectorPos.x + i, 0, BKimage1.w, BKimage1.h);
+  console.log(BKimage.w);
       
 }
 
