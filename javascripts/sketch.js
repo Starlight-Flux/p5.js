@@ -82,7 +82,7 @@ function setup() {
   //Items being animated//
   
   //background
-  Img_Backtrees = loadImage("parallax-forest-back-trees.png");
+  Img_Backtrees = loadImage("assets/parallax-forest-back-trees.png");
   GameOb_Backtrees = new GameAutom(0,0,width ,height,10,0);
 }
 
