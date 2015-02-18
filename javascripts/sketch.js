@@ -27,61 +27,62 @@ function GameAutom(x,y,w,h,speedX,speedY){
 //images
 var GameOb_Backtrees;
 
-
 var Img_Backtrees;
-
-function preload() {
-  Img_Backtrees = loadImage("parallax-forest-back-trees.png");
-}
 
 function setup() {
 
-GameObj.prototype.add = function(ix,iy){
-      this.oldVectorPos.set(this.curVectorPos);
-      this.curVectorPos.add(ix,iy);
-};
+	//prototypes and functions
 
-GameObj.prototype.set = function(x,y){
-      this.oldVectorPos.set(this.curVectorPos);
-      this.curVectorPos.set(x,y);
-     
-};
+	//make the GameObj functions
+	
+	GameObj.prototype.add = function(ix,iy){
+		  this.oldVectorPos.set(this.curVectorPos);
+		  this.curVectorPos.add(ix,iy);
+	};
 
-//Make the GameAutom prototype
-GameAutom.prototype = Object.create(GameObj.prototype);
+	GameObj.prototype.set = function(x,y){
+		  this.oldVectorPos.set(this.curVectorPos);
+		  this.curVectorPos.set(x,y);
+		 
+	};
+	
+	//Make the GameAutom prototype
+	GameAutom.prototype = Object.create(GameObj.prototype);
 
-//Set the GameAutom prototype constructor to the GameAutom function
-GameAutom.prototype.constructor = GameAutom;
+	//Set the GameAutom prototype constructor to the GameAutom function
+	GameAutom.prototype.constructor = GameAutom;
 
-GameAutom.prototype.reset = function(){
-    this.oldVectorPos.set(this.curVectorPos);
-    this.oldW = this.w;
-    this.oldH = this.h;
-   
-    this.curVectorPos.set(this.firstVectorPos.x,this.firstVectorPos.y);
-    this.w = this.firstW;
-    this.h = this.firstH;
-}
+	GameAutom.prototype.reset = function(){
+		this.oldVectorPos.set(this.curVectorPos);
+		this.oldW = this.w;
+		this.oldH = this.h;
+	   
+		this.curVectorPos.set(this.firstVectorPos.x,this.firstVectorPos.y);
+		this.w = this.firstW;
+		this.h = this.firstH;
+	}
 
-GameAutom.prototype.move = function(){
-    this.oldVectorPos.set(this.curVectorPos);
-    this.curVectorPos.add(this.curVectorSpeed);
-   
-}
+	GameAutom.prototype.move = function(){
+		this.oldVectorPos.set(this.curVectorPos);
+		this.curVectorPos.add(this.curVectorSpeed);
+	   
+	}
 
-GameAutom.prototype.changeSpeed = function(speedX,speedY){
-    this.oldVectorSpeed.set(this.curVectorSpeed);
-    this.curVectorSpeed.set(speedX,speedY);
-}
-
-
+	GameAutom.prototype.changeSpeed = function(speedX,speedY){
+		this.oldVectorSpeed.set(this.curVectorSpeed);
+		this.curVectorSpeed.set(speedX,speedY);
+	}
 
 
-  // put setup code here
+  //Environment code 
   var myCanvas = createCanvas(600, 400);
   myCanvas.parent('myContainer');
   background(10,10,10);
   
+  //Items being animated//
+  
+  //background
+  Img_Backtrees = loadImage("parallax-forest-back-trees.png");
   GameOb_Backtrees = new GameAutom(0,0,width ,height,10,0);
 }
 
