@@ -82,14 +82,9 @@ function setup() {
   //Items being animated//
   
   //background
-<<<<<<< HEAD
 
   Img_Backtrees = loadImage("javascripts/parallax-forest-back-trees.png");
  
-  //image(Img_Backtrees, 0, 0);
-=======
-  Img_Backtrees = loadImage("parallax-forest-back-trees.png");
->>>>>>> parent of 2bd2424... Amendment to backtress image directory path
   GameOb_Backtrees = new GameAutom(0,0,width ,height,10,0);
 }
 
