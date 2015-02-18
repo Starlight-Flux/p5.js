@@ -5,10 +5,6 @@ var GameOb_Backtrees;
 
 var Img_Backtrees;
 
-function preload() {
-  Img_Backtrees = loadImage("/images/assets/parallax-forest-back-trees.png");
-}
-
 function GameObj(x,y,w,h){
     this.curVectorPos = createVector(x,y);
     this.w = w;
@@ -86,6 +82,7 @@ function setup() {
   //Items being animated//
   
   //background
+  Img_Backtrees = loadImage("/images/assets/parallax-forest-back-trees.png");
   //image(Img_Backtrees, 0, 0);
   GameOb_Backtrees = new GameAutom(0,0,width ,height,10,0);
 }
