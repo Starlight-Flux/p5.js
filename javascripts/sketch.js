@@ -28,10 +28,11 @@ function GameAutom(x,y,w,h,speedX,speedY){
 var GameOb_Backtrees;
 
 
-//var Img_Backtrees;
-//function preload() {
-//  Img_Backtrees = loadImage("parallax-forest-back-trees.png");
-//}
+var Img_Backtrees;
+
+function preload() {
+  Img_Backtrees = loadImage("parallax-forest-back-trees.png");
+}
 
 function setup() {
 
@@ -90,7 +91,7 @@ function draw() {
   
   update();
   
-  //image(Img_Backtrees, 0, 0);
+  image(Img_Backtrees, 0, 0);
   //fill(0,200,0);
   //rect(GameOb_Backtrees.curVectorPos.x + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
   //fill(0,300,0);
