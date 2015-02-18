@@ -1,5 +1,14 @@
 var i = 0;
 
+//images
+var GameOb_Backtrees;
+
+var Img_Backtrees;
+
+function preload() {
+  Img_Backtrees = loadImage("/images/assets/parallax-forest-back-trees.png");
+}
+
 function GameObj(x,y,w,h){
     this.curVectorPos = createVector(x,y);
     this.w = w;
@@ -23,11 +32,6 @@ function GameAutom(x,y,w,h,speedX,speedY){
     this.curVectorSpeed = createVector(speedX,speedY);
    
 }
-
-//images
-var GameOb_Backtrees;
-
-var Img_Backtrees;
 
 function setup() {
 
@@ -82,17 +86,17 @@ function setup() {
   //Items being animated//
   
   //background
-  Img_Backtrees = loadImage("assets/parallax-forest-back-trees.png");
+  //image(Img_Backtrees, 0, 0);
   GameOb_Backtrees = new GameAutom(0,0,width ,height,10,0);
 }
 
 function draw() {
   // put drawing code here
-  background(10,10,10);
+  //background(10,10,10);
   
   update();
   
-  image(Img_Backtrees, 0, 0);
+  image(Img_Backtrees, 10, 10);
   //fill(0,200,0);
   //rect(GameOb_Backtrees.curVectorPos.x + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
   //fill(0,300,0);
