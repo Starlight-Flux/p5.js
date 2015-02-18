@@ -91,7 +91,7 @@ function draw() {
   
   update();
   
-  image(Img_Backtrees, 0, 0);
+  //image(Img_Backtrees, 0, 0);
   //fill(0,200,0);
   //rect(GameOb_Backtrees.curVectorPos.x + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
   //fill(0,300,0);
