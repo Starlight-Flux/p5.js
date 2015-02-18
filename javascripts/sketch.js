@@ -25,8 +25,13 @@ function GameAutom(x,y,w,h,speedX,speedY){
 }
 
 //images
-var BKimage1;
+var GameOb_Backtrees;
 
+
+var Img_Backtrees;
+function preload() {
+  Img_Backtrees = loadImage("..\images\parallax-forest-back-trees.png");
+}
 
 function setup() {
 
@@ -76,7 +81,7 @@ GameAutom.prototype.changeSpeed = function(speedX,speedY){
   myCanvas.parent('myContainer');
   background(10,10,10);
   
-  BKimage1 = new GameAutom(0,0,width/2,height,10,0);
+  GameOb_Backtrees = new GameAutom(0,0,width ,height,10,0);
 }
 
 function draw() {
@@ -85,10 +90,11 @@ function draw() {
   
   update();
   
-  
+  image(Img_Backtrees, 0, 0);
   fill(0,200,0);
-  rect(BKimage1.curVectorPos.x + i, 0, BKimage1.w, BKimage1.h);
-  console.log(BKimage.w);
+  rect(GameOb_Backtrees.curVectorPos.x + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
+  fill(0,300,0);
+  rect((GameOb_Backtrees.curVectorPos.x - GameOb_Backtrees.w) + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
       
 }
 
