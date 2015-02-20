@@ -88,7 +88,7 @@ function setup() {
  
   GameOb_Backtrees = new GameAutom(0,0,width ,height,10,0);
   
-  Img_BK_lighting = loadImage("javascripts/parallax-forest-lights,png");
+  Img_BK_lighting = loadImage("javascripts/parallax-forest-lights.png");
 }
 
 function draw() {
