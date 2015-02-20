@@ -98,8 +98,8 @@ function draw() {
   update();
   
   image(Img_Backtrees,0,0,width,height);
-  image(Img_BK_lighting,GameOb_Backtrees.curVectorPos.x + i, 0,width,height);
-  image(Img_BK_lighting,GameOb_Backtrees.curVectorPos.x - GameOb_Backtrees.w) + i,0,width,height);
+  image(Img_BK_lighting,i,0,width,height);
+  image(Img_BK_lighting, i-width ,0,width,height);
   //fill(0,200,0);
   //rect(GameOb_Backtrees.curVectorPos.x + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
   //fill(0,300,0);
