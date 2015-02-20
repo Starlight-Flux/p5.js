@@ -4,6 +4,7 @@ var i = 0;
 var GameOb_Backtrees;
 
 var Img_Backtrees;
+var Img_BK_lighting;
 
 function GameObj(x,y,w,h){
     this.curVectorPos = createVector(x,y);
@@ -86,6 +87,8 @@ function setup() {
   Img_Backtrees = loadImage("javascripts/parallax-forest-back-trees.png");
  
   GameOb_Backtrees = new GameAutom(0,0,width ,height,10,0);
+  
+  Img_BK_lighting = loadImage("javascripts/parallax-forest-lights,png");
 }
 
 function draw() {
@@ -95,6 +98,7 @@ function draw() {
   update();
   
   image(Img_Backtrees,0,0,width,height);
+  image(Img_BK_lighting,i,0,width,height);
   //fill(0,200,0);
   //rect(GameOb_Backtrees.curVectorPos.x + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
   //fill(0,300,0);
