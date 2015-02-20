@@ -100,7 +100,7 @@ function draw() {
   //background(10,10,10);
   
   update();
-  
+  noStroke();
   image(Img_Backtrees,0,0,width,height);
   
   image(Img_BK_lighting,i,0,width,height);
