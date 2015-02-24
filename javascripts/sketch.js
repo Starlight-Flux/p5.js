@@ -6,6 +6,7 @@ var GameOb_Backtrees;
 var Img_Backtrees;
 var Img_BK_lighting;
 var Img_BK_MidTress;
+var Img_BK_FrontTress;
 
 function GameObj(x,y,w,h){
     this.curVectorPos = createVector(x,y);
@@ -93,6 +94,8 @@ function setup() {
   
   Img_BK_MidTress = loadImage("javascripts/parallax-forest-middle-trees.png");
   
+  Img_BK_FrontTress =  loadImage("javascripts/parallax-forest-front-trees.png")
+  
 }
 
 function draw() {
@@ -108,6 +111,9 @@ function draw() {
   
   image(Img_BK_MidTress,i,0,width,height);
   image(Img_BK_MidTress,i-width,0,width,height);
+  
+  image(Img_BK_FrontTress,i,0,width,height);
+  image(Img_BK_FrontTress,i-width,0,width,height);
   //fill(0,200,0);
   //rect(GameOb_Backtrees.curVectorPos.x + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
   //fill(0,300,0);
