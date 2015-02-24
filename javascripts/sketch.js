@@ -113,7 +113,7 @@ function draw() {
   image(Img_BK_MidTress,i+width,0,width,height);
   
   image(Img_BK_FrontTress,i,0,width,height);
-  image(Img_BK_FrontTress,i-width,0,width,height);
+  image(Img_BK_FrontTress,i+width,0,width,height);
   //fill(0,200,0);
   //rect(GameOb_Backtrees.curVectorPos.x + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
   //fill(0,300,0);
