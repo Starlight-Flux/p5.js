@@ -124,10 +124,10 @@ function draw() {
 function update(){
 
 if(millis()%500 != 0){
-    console.log(i >= 0);
+    console.log(i <= 0 - width);
     i--;
 	
-	if(i >= 0){
+	if(i <= 0 - width){
 	 i=0;
 	}
 
