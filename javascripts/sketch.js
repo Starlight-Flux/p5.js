@@ -106,8 +106,8 @@ function draw() {
   noStroke();
   image(Img_Backtrees,0,0,width,height);
   
-  image(Img_BK_lighting,i,0,width,height);
-  image(Img_BK_lighting, i+width ,0,width,height);
+  image(Img_BK_lighting,0,0,width,height);
+  //image(Img_BK_lighting, i+width ,0,width,height);
   
   image(Img_BK_MidTress,i,0,width,height);
   image(Img_BK_MidTress,i+width,0,width,height);
