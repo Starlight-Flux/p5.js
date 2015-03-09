@@ -86,7 +86,7 @@ function setup() {
   
   //Items being animated//
   
-  Frames_Lyra_Skark = loadImage("/javascripts/assets/Lyra_Shark_fr1.png");
+  Frames_Lyra_Skark = loadImage("/javascripts/Lyra_Shark_fr1.png");
   
   //background
 
