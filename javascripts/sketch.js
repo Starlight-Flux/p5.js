@@ -109,7 +109,7 @@ function draw() {
   update();
   noStroke();
   
-  image(Frames_Lyra_Skark,0,0);
+  image(Frames_Lyra_Skark,0,0,5,5);
   
   image(Img_Backtrees,0,0,width,height);
   
