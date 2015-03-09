@@ -8,6 +8,8 @@ var Img_BK_lighting;
 var Img_BK_MidTress;
 var Img_BK_FrontTress;
 
+var Frames_Lyra_Skark; // = [{Path:""}];
+
 function GameObj(x,y,w,h){
     this.curVectorPos = createVector(x,y);
     this.w = w;
@@ -84,6 +86,8 @@ function setup() {
   
   //Items being animated//
   
+  Frames_Lyra_Skark = loadImage("/javascripts/assets/Lyra_Shark_fr1.png");
+  
   //background
 
   Img_Backtrees = loadImage("javascripts/parallax-forest-back-trees.png");
@@ -104,6 +108,9 @@ function draw() {
   
   update();
   noStroke();
+  
+  image(Frames_Lyra_Skark,0,0);
+  
   image(Img_Backtrees,0,0,width,height);
   
   image(Img_BK_lighting,0,0,width,height);
