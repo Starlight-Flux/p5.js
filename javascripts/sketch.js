@@ -8,7 +8,7 @@ var Img_BK_lighting;
 var Img_BK_MidTress;
 var Img_BK_FrontTress;
 
-var Frames_Lyra_Skark; // = [{Path:""}];
+var Frames_Lyra_Skark = []; // = [{Path:""}];
 
 function GameObj(x,y,w,h){
     this.curVectorPos = createVector(x,y);
@@ -86,7 +86,11 @@ function setup() {
   
   //Items being animated//
   
-  Frames_Lyra_Skark = loadImage("javascripts/Lyra_Shark_fr1.png");
+  for(var i=0; i<1; i++)
+  {
+  Frames_Lyra_Skark[i] = loadImage("javascripts/Lyra_Shark_fr1.png");
+  }
+  
   
   //background
 
