@@ -88,7 +88,7 @@ function setup() {
   
   for(var i=0; i<1; i++)
   {
-  Frames_Lyra_Skark[i] = loadImage("javascripts/Lyra_Shark_fr1.png");
+  Frames_Lyra_Skark[i] = loadImage("javascripts/Lyra_Shark_fr" + 1 + ".png");
   }
   
   
