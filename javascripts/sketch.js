@@ -143,7 +143,7 @@ if(millis()%500 != 0){
     i--;
     LyraFrames++;
     
-        if(LyraFrames = Frames_Lyra_Skark.length - 1)
+        if(LyraFrames >= Frames_Lyra_Skark.length - 1)
         {
             LyraFrames = 0;
         }
