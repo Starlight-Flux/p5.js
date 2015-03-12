@@ -130,7 +130,7 @@ function draw() {
   //rect(GameOb_Backtrees.curVectorPos.x + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
   //fill(0,300,0);
   //rect((GameOb_Backtrees.curVectorPos.x - GameOb_Backtrees.w) + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
-  image(Frames_Lyra_Skark[1],50,height/9,width/2,height);    
+  image(Frames_Lyra_Skark[0],50,height/9,width/2,height);    
 }
 
 function update(){
