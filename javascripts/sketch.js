@@ -141,10 +141,14 @@ function update(){
 if(millis()%500 != 0){
     console.log(i <= 0 - width);
     i--;
-    LyraFrames++;
+    
         if(LyraFrames > Frames_Lyra_Skark.length)
         {
             LyraFrames = 0;
+        }
+        else
+        {
+            LyraFrames++;    	
         }
 	if(i <= 0 - width){
 	 i=0;
