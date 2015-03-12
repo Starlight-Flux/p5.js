@@ -9,7 +9,7 @@ var Img_BK_MidTress;
 var Img_BK_FrontTress;
 
 var Frames_Lyra_Skark = []; // = [{Path:""}];
-var LyraFrames;
+var LyraFrames = 0;
 
 function GameObj(x,y,w,h){
     this.curVectorPos = createVector(x,y);
