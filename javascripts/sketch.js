@@ -141,7 +141,7 @@ function update(){
 if(millis()%500 != 0){
     console.log(i <= 0 - width);
     i--;
-    LyraFrames++;
+    LyraFrames+= 0.25;
     
         if(LyraFrames >= Frames_Lyra_Skark.length - 1)
         {
