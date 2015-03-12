@@ -149,7 +149,7 @@ if(millis()%500 != 0){
 
   }
   
-  if(second()%1 == 0){
+  if(second()%3 == 0){
   LyraFrames+= 1;
   console.log(second()%8);  
         if(LyraFrames >= Frames_Lyra_Skark.length - 1)
