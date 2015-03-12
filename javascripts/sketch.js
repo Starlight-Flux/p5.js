@@ -149,7 +149,7 @@ if(millis()%500 != 0){
 
   }
   
-  if(millis()%1000 != 0){
+  if(millis()%2000 != 0){
   LyraFrames+= 1;
     
         if(LyraFrames >= Frames_Lyra_Skark.length - 1)
