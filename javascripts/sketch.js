@@ -142,7 +142,7 @@ if(millis()%500 != 0){
     console.log(i <= 0 - width);
     i--;
     
-        if(LyraFrames > Frames_Lyra_Skark.length)
+        if(LyraFrames = Frames_Lyra_Skark.length - 1)
         {
             LyraFrames = 0;
         }
