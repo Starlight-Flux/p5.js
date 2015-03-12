@@ -151,7 +151,7 @@ if(millis()%500 != 0){
   
   if(secord()%8000 != 0){
   LyraFrames+= 1;
-  console.log(secord()%8000);  
+  console.log(second()%8000);  
         if(LyraFrames >= Frames_Lyra_Skark.length - 1)
         {
             LyraFrames = 0;
