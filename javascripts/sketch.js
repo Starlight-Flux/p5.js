@@ -86,7 +86,7 @@ function setup() {
   
   //Items being animated//
   
-  for(var i=0; i<2; i++)
+  for(var i=0; i<1; i++)
   {
    var pathIndex = i + 1;
    Frames_Lyra_Skark[i] = loadImage("javascripts/Lyra_Shark_fr" + pathIndex.toString() + ".png");
