@@ -9,6 +9,7 @@ var Img_BK_MidTress;
 var Img_BK_FrontTress;
 
 var Frames_Lyra_Skark = []; // = [{Path:""}];
+var LyraFrames;
 
 function GameObj(x,y,w,h){
     this.curVectorPos = createVector(x,y);
@@ -86,11 +87,13 @@ function setup() {
   
   //Items being animated//
   
-  for(var i=0; i<1; i++)
+  for(var i=0; i<2; i++)
   {
    var pathIndex = i + 1;
    Frames_Lyra_Skark[i] = loadImage("javascripts/Lyra_Shark_fr" + pathIndex.toString() + ".png");
   }
+  
+  LyraFrames = 0;
   
   
   //background
@@ -130,7 +133,7 @@ function draw() {
   //rect(GameOb_Backtrees.curVectorPos.x + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
   //fill(0,300,0);
   //rect((GameOb_Backtrees.curVectorPos.x - GameOb_Backtrees.w) + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
-  image(Frames_Lyra_Skark[0],50,height/9,width/2,height);    
+  image(Frames_Lyra_Skark[LyraFrames],50,height/9,width/2,height);    
 }
 
 function update(){
@@ -138,7 +141,11 @@ function update(){
 if(millis()%500 != 0){
     console.log(i <= 0 - width);
     i--;
-	
+    LyraFrames++;
+        if(LyraFrames > 1)
+        {
+            LyraFrames = 0;
+        }
 	if(i <= 0 - width){
 	 i=0;
 	}
