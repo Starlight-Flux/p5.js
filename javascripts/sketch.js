@@ -141,17 +141,22 @@ function update(){
 if(millis()%500 != 0){
     console.log(i <= 0 - width);
     i--;
-    LyraFrames+= 0.25;
+    
+        
+	if(i <= 0 - width){
+	 i=0;
+	}
+
+  }
+  
+  if(millis()%1000 != 0){
+  LyraFrames+= 1;
     
         if(LyraFrames >= Frames_Lyra_Skark.length - 1)
         {
             LyraFrames = 0;
         }
         
-	if(i <= 0 - width){
-	 i=0;
-	}
-
   }
 
 }
