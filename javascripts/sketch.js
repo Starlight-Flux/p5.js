@@ -10,6 +10,10 @@ var Img_BK_FrontTress;
 
 var Frames_Lyra_Skark = []; // = [{Path:""}];
 var LyraFrames = 0;
+var tick = 0;
+
+
+
 
 function GameObj(x,y,w,h){
     this.curVectorPos = createVector(x,y);
@@ -138,6 +142,8 @@ function draw() {
 
 function update(){
 
+tick += millis(); 
+
 if(millis()%500 != 0){
     console.log(i <= 0 - width);
     i--;
@@ -149,14 +155,15 @@ if(millis()%500 != 0){
 
   }
   
-  if(millis()%500 != 0){
+  //if(millis()%500 != 0){
+  if(tick > 500){	
   LyraFrames+= 1;
   console.log(second()%8);  
         if(LyraFrames >= Frames_Lyra_Skark.length - 1)
         {
             LyraFrames = 0;
         }
-        
+        tick = 0;
   }
 
 }
