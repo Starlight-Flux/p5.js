@@ -160,7 +160,7 @@ if(millis()%500 != 0){
   }
   
   var time = millis() 
-  if(time > 500 == 0){
+  if(time > 500){
  // if(tick > 10000000){	
   LyraFrames+= 1;
   console.log(second()%8);  
