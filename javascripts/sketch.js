@@ -159,8 +159,8 @@ if(millis()%500 != 0){
 
   }
   
-  //if(millis()%500 != 0){
-  if(tick > 10000000){	
+  if(millis()%500000 != 0){
+ // if(tick > 10000000){	
   LyraFrames+= 1;
   console.log(second()%8);  
         if(LyraFrames >= Frames_Lyra_Skark.length - 1)
