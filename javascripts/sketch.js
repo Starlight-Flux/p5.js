@@ -112,6 +112,8 @@ function setup() {
   
   Img_BK_FrontTress =  loadImage("javascripts/parallax-forest-front-trees.png")
   
+  tick = 0;
+  
 }
 
 function draw() {
