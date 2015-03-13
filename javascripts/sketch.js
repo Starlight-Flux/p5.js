@@ -142,7 +142,9 @@ function draw() {
 
 function update(){
 
-tick += millis(); 
+
+var tock = millis() - tick;
+tick += tock;
 
 if(millis()%500 != 0){
     console.log(i <= 0 - width);
@@ -156,7 +158,7 @@ if(millis()%500 != 0){
   }
   
   //if(millis()%500 != 0){
-  if(tick > 500){	
+  if(tick > 5000){	
   LyraFrames+= 1;
   console.log(second()%8);  
         if(LyraFrames >= Frames_Lyra_Skark.length - 1)
