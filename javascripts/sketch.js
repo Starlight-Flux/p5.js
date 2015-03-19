@@ -11,6 +11,14 @@ var Img_BK_FrontTress;
 var Frames_Lyra_Skark = []; // = [{Path:""}];
 var LyraFrames = 0;
 
+
+var timerNew;
+var timerOld;
+var timerD;
+//var timer;
+var x = 0;
+var t; 
+
 function GameObj(x,y,w,h){
     this.curVectorPos = createVector(x,y);
     this.w = w;
@@ -35,12 +43,13 @@ function GameAutom(x,y,w,h,speedX,speedY){
    
 }
 
+
 function setup() {
 
 	//prototypes and functions
 
 	//make the GameObj functions
-	
+    	
 	GameObj.prototype.add = function(ix,iy){
 		  this.oldVectorPos.set(this.curVectorPos);
 		  this.curVectorPos.add(ix,iy);
@@ -81,9 +90,20 @@ function setup() {
 
 
   //Environment code 
-  var myCanvas = createCanvas(600, 400);
+  var myCanvas = createCanvas(windowWidth/10*9, windowHeight/10*9);
   myCanvas.parent('myContainer');
   background(10,10,10);
+  
+  
+  ////timer code
+
+  dt = 0;
+
+  timerD = 0;
+  timerNew = 0;
+  timerOld = 0;
+  
+  
   
   //Items being animated//
   
@@ -94,7 +114,9 @@ function setup() {
   }
   
   LyraFrames = 0;
-  
+
+
+
   
   //background
 
@@ -107,21 +129,68 @@ function setup() {
   Img_BK_MidTress = loadImage("javascripts/parallax-forest-middle-trees.png");
   
   Img_BK_FrontTress =  loadImage("javascripts/parallax-forest-front-trees.png")
-  
+
+
+
+  sineWave = (function (theta,amplitude,dx) {
+      /*this.theta = 0.0;      // Start angle at 0
+      this.amplitude = 75.0; // Height of wave  // How many pixels before the wave repeats
+      this.dx = 0.02;               // Value for incrementing x*/
+      this.theta = 0.0;      // Start angle at 0
+      this.amplitude = 500.0; // Height of wave  // How many pixels before the wave repeats
+      this.dx = 0.05;               // Value for incrementing x*
+
+      return function () {
+          this.theta += this.dx;
+          return sin(this.theta) * this.amplitude;
+      }
+
+
+  })();
+
+
+  timedExe = (function (resetVal, funcRun) {
+
+      var timer = { to: 0, tn: 0, td: 0, stopwatch: 0, resetValue: 0 };
+      
+      return function (resetVal,funcRun) {
+          // JavaScript "closure" means I have access to foo in here,
+          // because it is defined in the function in which I was defined.
+          timer.tn = millis();
+          timer.td = timer.tn - timer.to;
+          timer.to = timer.tn;
+          timer.stopwatch += timer.td;
+
+          if (timer.stopwatch > resetVal) {
+              timer.stopwatch = 0;
+              console.log("reset count");
+              funcRun();
+          }
+
+          return timer.stopwatch;
+      };
+  })();
+
+  t = createTween("x", 1024, 100).play();
 }
 
 function draw() {
-  // put drawing code here
-  //background(10,10,10);
   
-  update();
+
+
+  console.log(timedExe(50, nextLyraFrame));
+
+  //setInterval(moveBackground, 500);
+  
+  //setInterval(nextLyraFrame, 5000);
+
   noStroke();
   
   
   
-  image(Img_Backtrees,0,0,width,height);
+  image(Img_Backtrees,dt,0,width,height);
   
-  image(Img_BK_lighting,0,0,width,height);
+  //image(Img_BK_lighting,0,0,width,height);
   //image(Img_BK_lighting, i+width ,0,width,height);
   
   image(Img_BK_MidTress,i,0,width,height);
@@ -129,17 +198,27 @@ function draw() {
   
   image(Img_BK_FrontTress,i,0,width,height);
   image(Img_BK_FrontTress,i+width,0,width,height);
-  //fill(0,200,0);
-  //rect(GameOb_Backtrees.curVectorPos.x + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
-  //fill(0,300,0);
-  //rect((GameOb_Backtrees.curVectorPos.x - GameOb_Backtrees.w) + i, 0, GameOb_Backtrees.w, GameOb_Backtrees.h);
-  image(Frames_Lyra_Skark[LyraFrames],50,height/9,width/2,height);    
+  image(Frames_Lyra_Skark[LyraFrames],(windowWidth/2 - 50)+ sineWave(0,0.02,75.0),height/10*5,width/4,height/2);
+
+  rect(x, height / 2, 50, 50);
+
+    
 }
 
-function update(){
+function nextLyraFrame(){ 
+        
+        LyraFrames+= 1;
+        if(LyraFrames >= Frames_Lyra_Skark.length - 1)
+        {
+            LyraFrames = 0;
+        }
+  
+}
 
-if(millis()%500 != 0){
-    console.log(i <= 0 - width);
+function moveBackground(){
+
+//if(millis()%500 != 0){
+    //console.log(i <= 0 - width);
     i--;
     
         
@@ -147,7 +226,7 @@ if(millis()%500 != 0){
 	 i=0;
 	}
 
-  }
+  //}
   
   /*if(millis()%1000 != 0){
   LyraFrames+= 1;
@@ -158,6 +237,7 @@ if(millis()%500 != 0){
         }
         
   }*/
+  
 
 }
 
